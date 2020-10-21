@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.facear.Activity.AddressDocCameraActivity">
+    <RelativeLayout
+        android:id="@+id/cameraRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.example.facear.IDDocCamera.CameraPreview
+            android:id="@+id/camera_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/cropRel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/imgCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/address_doc_back">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAllCaps="false"
+            android:text="Powered by BIOMIID"
+            android:textStyle="bold"
+            android:fontFamily="@font/berylium_bdit"
+            android:layout_marginTop="80dp"
+            android:textColor="@color/whiteColor"
+            android:textSize="18dp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAllCaps="false"
+            android:text="Place the Front ID Card inside the \n  Frame and take the photo"
+            android:textColor="@color/whiteColor"
+            android:textSize="20dp"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/btnCapture"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/camera_take"/>
+        <ImageView
+            android:id="@+id/imgFlash"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/camera_flash_off"/>
+        <LinearLayout
+            android:id="@+id/previewBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnTake"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/round_button"
+                android:text="My Photo is clear"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteColor"
+                android:visibility="visible"/>
+            <Button
+                android:id="@+id/btnRetake"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundbutton_white"
+                android:text="Re-take"
+                android:textAllCaps="false"
+                android:textColor="@color/purpleColor"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/oval_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.example.facear.CustomView.AddressDocView
+            android:id="@+id/custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

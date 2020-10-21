@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.KYC_Setting_Address"
+    android:background="@color/colorProfileBack">
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purpleColor"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="@color/whiteColor"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rel_height"
+        android:layout_below="@id/topBar"
+        android:background="@color/purpleColor"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_below="@id/topBar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/emputy_round_button">
+        <RelativeLayout
+            android:id="@+id/countryView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/whiteColor">
+            <ImageView
+                android:id="@+id/imgFlag"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/txtCountryName"
+                android:layout_toRightOf="@+id/imgFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Slect the Country"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorBlack"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/countryView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorBlack"/>
+        <EditText
+            android:id="@+id/txtStreet1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/line"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Your Street1"
+            android:textColor="@color/colorBlack"/>
+        <EditText
+            android:id="@+id/txtStreet2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtStreet1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Your Street2"
+            android:textColor="@color/colorBlack"/>
+        <EditText
+            android:id="@+id/txtCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtStreet2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Your City"
+            android:textColor="@color/colorBlack"/>
+        <EditText
+            android:id="@+id/txtRegion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtCity"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter Your Region/State"
+            android:textColor="@color/colorBlack"/>
+        <EditText
+            android:id="@+id/txtPostCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtRegion"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Enter PostCode/Zip"
+            android:inputType="number"
+            android:textColor="@color/colorBlack"/>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/txtPostCode"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteColor"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_back">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_address_purple"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
